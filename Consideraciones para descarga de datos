@@ -1,5 +1,5 @@
-##Para la descarga masiva de líneas litorales se usa el algoritmo CoastSat diseñado por Kilian Vos (https://github.com/kvos/CoastSat), rutina creada en Jupyter.
-##Las instrucciones de descarga y procesamiento de líneas se encuentran detalladas dentro de su repositorio, pero es necesario remarcar algunos detalles
+Para la descarga masiva de líneas litorales se usa el algoritmo CoastSat diseñado por Kilian Vos (https://github.com/kvos/CoastSat), rutina creada en Jupyter.
+Las instrucciones de descarga y procesamiento de líneas se encuentran detalladas dentro de su repositorio, pero es necesario remarcar algunos detalles
 
 ##RECOMENDACIONES
 
