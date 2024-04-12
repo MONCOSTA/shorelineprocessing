@@ -21,3 +21,5 @@ CASO ESPECIAL: Para playas muy pequeñas, modificar en la celda 1.3.2 Shoreline 
 IMPORTANTE!! PT2. Al momento de finalizar la descarga de las líneas de costa en la tercera celda del punto 1.3.3 Batch shoreline detection, descargar el archivo en formato puntos (points) y líneas (lines). Dentro de la celda hay un comentario del autor donde se especifica la opción para elegir el formato de descarga. Una vez descargado un archivo, la celda pasa de asterisco a número, en ese momento se debe cambiar al segundo formato y correr nuevamente la celda. Ambos formatos se guardarán en la carpeta.
 
 ![image](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/0946e8a6-42e3-4fc3-bdb6-79677a580b12)
+
+Los códigos elaborados más un texto guía del post procesamiento estará disponible en el repositorio
