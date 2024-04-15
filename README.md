@@ -35,3 +35,7 @@ En la imagen, se observa una cantidad considerable de arcos en las líneas, dond
 
 Una vez ya han sido emparejadas, el post proceso se puede resumir en el siguiente diagrama de flujo:
 
+
+![Diagrama sin título drawio](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/165a302b-8b0a-4071-80dc-f2fb71e186ab)
+
+Los códigos necesarios están subidos en el repositorio.
