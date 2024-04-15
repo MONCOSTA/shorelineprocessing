@@ -1,0 +1,14 @@
+Las tasas de erosión costera son calculadas a partir de la extensión DSAS desarrollada por el Servicio Geológico de Estados Unidos (USGS).
+
+Principalmente, y para actualizar la web de Moncosta, es necesario separar las lineas por estación de invierno y verano (ver rutina en R).
+
+Posterior, se añaden los siguientes campos:
+
+DSAS_date (formato lenght extension 10 o 20), donde las fechas deben ir en formato mes/día/año
+DSAS_uncy (formato double), rellenar con 1
+DSAS_type (formato lenght extension 10 o 20), rellenar con 1
+
+(Revisar guía DSAS para mayor detalle) https://pubs.usgs.gov/publication/ofr20211091
+
+Visualmente, se vería de esta forma:
+
