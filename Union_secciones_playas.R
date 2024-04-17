@@ -22,13 +22,13 @@ todos <- rbind(archivo1, archivo2, archivo3, archivo4, archivo5)
 todos$date <- as.POSIXct(gsub("\\..*", "", todos$date), format = "%Y/%m/%d %H:%M:%S")
 
 # Identificar las fechas comunes entre todos los tramos de la playa
-fechas_comunes <- Reduce(intersect, lapply(list(archivo1$datew, archivo2$datew, archivo3$datew, archivo4$datew, archivo5$datew), as.POSIXct))
+fechas_comunes <- Reduce(intersect, lapply(list(archivo1$date, archivo2$date, archivo3$date, archivo4$date, archivo5$date), as.POSIXct))
 
 print("Fechas comunes:")
 print(fechas_comunes)
 
 # Filtrar los datos para quedarnos solo con las fechas comunes
-coincidentes <- todos[todos$datew %in% fechas_comunes, ]
+coincidentes <- todos[todos$date %in% fechas_comunes, ]
 
 # Verificar el tamaño del objeto coincidentes
 print("Número de entidades después del filtrado:")
