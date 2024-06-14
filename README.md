@@ -6,13 +6,19 @@ Idealmente, que el área de estudio sea demarcada en Google Earth, exportándolo
 
 Por último, al momento de definir el área de estudio, se debe acotar lo que mas se pueda la playa a descargar, producto que la presencia de objetos/formas tales como edificaciones, humedales de marisma, lagunas artificiales, y otros cuerpos de agua; generarán una extracción errónea en las líneas de costa al momento de filtrar. Por lo mismo, es sumamente importante que las líneas que se vayan generando no sean interrumpidas o no tengan vacíos entre sí
 
-Luego, ubicar archivo GeoJSON en carpeta "examples" de CoastSat, y en carpeta "data" agregar una carpeta con el nombre del área de interés
+Luego, ubicar archivo GeoJSON en carpeta "examples" de CoastSat, y en carpeta "data" agregar una carpeta con el nombre del área de interés.
+
+![image](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/e936abbb-a197-45ed-96a3-c7129e748fc6)
+
+![image](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/9fab77b2-ab00-43d8-836a-8e00a31217a7)
+
+
 
 Posterior definir parámetros como rango de fechas, misiones a seleccionar, escena de Sentinel-2 para no repetir imágenes, proyección, etc (para mas detalles, revisar Github de CoastSat).
 
-IMPORTANTE!! Leer cada línea y descripción de celdas que tiene el algoritmo para un mejor entendimiento de este.
+IMPORTANTE!! Leer cada línea y descripción de celdas que tiene el algoritmo para un mejor entendimiento de este. Muchas funciones son vitales para que la extracción de líneas se haga de forma más simple, automatizada, y sin muchos errores.
 
-CASO ESPECIAL: Para playas muy pequeñas, modificar en la celda 1.3.2 Shoreline extraction el parámetro 'min_lenght_sl', si no el algoritmo no detectará la línea de costa por sus dimensiones
+CASO ESPECIAL: Para playas muy pequeñas, modificar en la celda 1.3.2 Shoreline extraction el parámetro 'min_lenght_sl', si no el algoritmo no detectará la línea de costa por sus dimensiones. En "min_beach_area" también se puede ajustar la dimensión de la playa en lo que respecta a superficie.
 
 ![image](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/e14dcdc3-39ce-4217-9a00-1759afdbc1bc)
 
@@ -29,11 +35,14 @@ Cuando estos puntos presentan interrupciones, se tienden a generar arcos al mome
 
 ![image](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/1d0eac95-e389-42f8-a044-05114b41f993)
 
-En la imagen, se observa una cantidad considerable de arcos en las líneas, donde ya no es viable eliminarlos ya que altera la robustez de la muestra. Por ello se deben tener en consideración las recomendaciones escritas al inicio de este documento.
+En la imagen, se observa una cantidad considerable de arcos en las líneas, donde ya no es viable eliminarlos ya que altera la representatividad de la muestra. Por ello se deben tener en consideración las recomendaciones escritas al inicio de este documento.
 
+El script de procesamiento de lineas actúa por carpeta, es decir, de una carpeta toma todos los archivos vectoriales para modificar el mismo archivo, y generar otros archivos vectoriales correspondientes a las lineas de costa de invierno y verano.
+
+También se debe considerar el procesamiento de los archivos en formato puntos. Dicho código requiere como elemento de entrada el de líneas de costa (ya con sus líneas corregidas) y el original en formato puntos. Este script individualiza cada punto y añade un campo de fecha en formato dia-mes-año.
+Como actúa de forma individual, se debe ingresar manualmente la ruta donde están los archivos de entrada y también de salida. Para mayores detalles, revisar script asociado al procesamiento de puntos
 Una vez ya han sido emparejadas, el post proceso se puede resumir en el siguiente diagrama de flujo:
 
 
-![Diagrama sin título drawio](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/165a302b-8b0a-4071-80dc-f2fb71e186ab)
 
 Los códigos necesarios están subidos en el repositorio.
