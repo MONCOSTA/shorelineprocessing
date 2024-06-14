@@ -5,8 +5,8 @@
   library(dplyr)
   
   # Cargar los archivos GeoJSON
-  lineas <- st_read("D:/CoastSat/Datos brutos/Junquillos/Junquillos_output_lines.geojson")
-  puntos <- st_read("D:/CoastSat/Datos brutos/Junquillos/Junquillos_output_points.geojson")
+  lineas <- st_read("ruta-archivo_lineas.geojson")
+  puntos <- st_read("ruta_archivo_puntos.geojson")
   
   # Obtener las fechas únicas en el archivo de líneas
   fechas_lineas <- unique(lineas$date)
@@ -30,7 +30,7 @@
   puntos_actualizados_singlepart <- st_cast(puntos_actualizados,"POINT")
   
   #Guardar archivo posterior a individualización
-  st_write(puntos_actualizados_singlepart,"D:/CoastSat/Datos brutos/Junquillos/Junquillos_output_points2.geojson")
+  st_write(puntos_actualizados_singlepart,"ruta_nuevo_archivo_puntos.geojson")
   
   print(head(puntos_actualizados_singlepart))
 
