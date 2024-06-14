@@ -1,3 +1,7 @@
+#########################
+#CÓDIGO PARA UNIR UNA PLAYA DIVIDIDA EN MÁS DE UNA SECCIÓN#
+#IMPORTANTE: MIENTRAS MÁS SECCIONES TENGA LA PLAYA, HAY MÁS CHANCES QUE SE FILTREN LÍNEAS DE COSTA POR FECHAS COINCIDENTES
+
 # Instala los paquetes si no los tienes instalados
 #install.packages("sf")
 #install.packages("dplyr")
