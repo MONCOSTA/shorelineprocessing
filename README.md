@@ -41,8 +41,10 @@ El script de procesamiento de lineas actúa por carpeta, es decir, de una carpet
 
 También se debe considerar el procesamiento de los archivos en formato puntos. Dicho código requiere como elemento de entrada el de líneas de costa (ya con sus líneas corregidas) y el original en formato puntos. Este script individualiza cada punto y añade un campo de fecha en formato dia-mes-año.
 Como actúa de forma individual, se debe ingresar manualmente la ruta donde están los archivos de entrada y también de salida. Para mayores detalles, revisar script asociado al procesamiento de puntos
-Una vez ya han sido emparejadas, el post proceso se puede resumir en el siguiente diagrama de flujo:
 
+Todo el post proceso se puede resumir en el siguiente diagrama de flujo:
+
+![flujo_sds](https://github.com/MONCOSTA/shorelineprocessing/assets/166852064/ec7bd8fd-075c-449e-8020-9a1b70b9145e)
 
 
 Los códigos necesarios están subidos en el repositorio.
